@@ -29,10 +29,10 @@ Raw event export: https://developer.mixpanel.com/reference/raw-event-export
 
 
 
-### Get leagues from sportmonks:
+### Export data from mixpanel:
 
 ```elixir
-ExMixpanel.leagues()
+ExMixpanel.export_events()
 ```
 
 For more information, please check [the API](https://github.com/vnnoder/ex_mixpanel/blob/master/lib/ex_mixpanel.ex)
