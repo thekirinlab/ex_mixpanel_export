@@ -35,5 +35,5 @@ Raw event export: https://developer.mixpanel.com/reference/raw-event-export
 ExMixpanel.export_events()
 ```
 
-For more information, please check [the API](https://github.com/vnnoder/ex_mixpanel/blob/master/lib/ex_mixpanel.ex)
+For more information, please check [the API](https://github.com/ngnclht1102/ex_mixpanel/blob/master/lib/ex_mixpanel/api.ex)
 
