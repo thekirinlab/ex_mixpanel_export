@@ -1,9 +1,7 @@
 defmodule ExMixpanel.Api do
+  alias ExMixpanel.{Config}
   require Logger
 
-  @exporter_username Application.get_env(:ex_mixpanel_export_username, :username)
-  @exporter_password Application.get_env(:ex_mixpanel_export_password, :secret)
-  @exporter_project_id Application.get_env(:ex_mixpanel_export_password, :project_id)
   @base_url "https://data.mixpanel.com/api/2.0/export"
 
   def get(path, query_opts \\ %{}) do
@@ -11,7 +9,7 @@ defmodule ExMixpanel.Api do
     query_opts = Map.merge(
       query_opts,
       %{
-        project_id: @exporter_project_id
+        project_id: Config.project_id()
       }
     )
 
@@ -28,7 +26,7 @@ defmodule ExMixpanel.Api do
   end
 
   def headers() do
-    authorization =  "Basic #{Base.encode64("#{@exporter_username}:#{@exporter_password}}")}}"
+    authorization =  "Basic #{Base.encode64("#{Config.username()}:#{Config.secret()}}")}}"
     [
       "Accept": "text/plain",
       "Authorization": authorization,

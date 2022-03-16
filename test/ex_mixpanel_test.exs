@@ -1,5 +1,6 @@
 defmodule ExMixpanelTest do
   use ExUnit.Case
+  alias ExMixpanel.{Config, Api}
   doctest ExMixpanel
 
   test "Api returns data" do

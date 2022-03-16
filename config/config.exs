@@ -29,6 +29,7 @@ use Mix.Config
 #
 #     import_config "#{Mix.env}.exs"
 
-config :ex_mixpanel, username: System.get_env("MIXPANEL_EXPORT_USERNAME")
-config :ex_mixpanel, secret: System.get_env("MIXPANEL_EXPORT_SECRET")
-config :ex_mixpanel, project_id: System.get_env("MIXPANEL_EXPORT_PROJECT_ID")
+config :ex_mixpanel,
+  username: System.get_env("MIXPANEL_EXPORT_USERNAME"),
+  secret: System.get_env("MIXPANEL_EXPORT_SECRET"),
+  project_id: System.get_env("MIXPANEL_EXPORT_PROJECT_ID")
