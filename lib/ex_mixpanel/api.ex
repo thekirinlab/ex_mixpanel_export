@@ -2,7 +2,7 @@ defmodule ExMixpanel.Api do
   alias ExMixpanel.{Config}
   require Logger
 
-  @base_url "https://data.mixpanel.com/api/2.0/export"
+  @base_url "https://data.mixpanel.com/api/2.0"
 
   def get(path, query_opts \\ %{}) do
     url = path |> build_url()
@@ -12,8 +12,8 @@ defmodule ExMixpanel.Api do
         project_id: Config.project_id()
       }
     )
-
-    HTTPoison.get(url, headers(), params: query_opts)
+    data = HTTPoison.get(url, headers(), params: query_opts)
+    data
     |> handle_response()
   end
 
@@ -26,7 +26,8 @@ defmodule ExMixpanel.Api do
   end
 
   def headers() do
-    authorization =  "Basic #{Base.encode64("#{Config.username()}:#{Config.secret()}}")}}"
+    authorization_string = "#{Config.username()}:#{Config.secret()}"
+    authorization =  "Basic #{Base.encode64(authorization_string)}"
     [
       "Accept": "text/plain",
       "Authorization": authorization,
@@ -40,6 +41,9 @@ defmodule ExMixpanel.Api do
 
   defp handle_response({:error, %HTTPoison.Error{id: nil, reason: :timeout}}),
     do: {:error, reason: :timeout}
+
+  defp handle_response({:error, %HTTPoison.Error{id: nil, reason: :econnrefused}}),
+    do: {:error, reason: :econnrefused}
 
   defp handle_response({:error, %HTTPoison.Response{body: body, status_code: _}}) do
     Logger.error(inspect(body))

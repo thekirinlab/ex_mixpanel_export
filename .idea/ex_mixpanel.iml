@@ -47,6 +47,12 @@
       <excludeFolder url="file://$MODULE_DIR$/_build/dev/lib/combine" />
       <excludeFolder url="file://$MODULE_DIR$/_build/dev/lib/idna" />
       <excludeFolder url="file://$MODULE_DIR$/_build/dev/lib/timex" />
+      <excludeFolder url="file://$MODULE_DIR$/_build/dev/lib/makeup" />
+      <excludeFolder url="file://$MODULE_DIR$/_build/dev/lib/makeup_erlang" />
+      <excludeFolder url="file://$MODULE_DIR$/_build/dev/lib/ex_doc" />
+      <excludeFolder url="file://$MODULE_DIR$/_build/dev/lib/nimble_parsec" />
+      <excludeFolder url="file://$MODULE_DIR$/_build/dev/lib/earmark_parser" />
+      <excludeFolder url="file://$MODULE_DIR$/_build/dev/lib/makeup_elixir" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
@@ -69,5 +75,17 @@
     <orderEntry type="library" name="jiffy" level="project" />
     <orderEntry type="library" name="json" level="project" />
     <orderEntry type="library" name="jazz" level="project" />
+    <orderEntry type="library" name="earmark_parser" level="project" />
+    <orderEntry type="library" name="makeup_elixir" level="project" />
+    <orderEntry type="library" name="makeup_erlang" level="project" />
+    <orderEntry type="library" name="jason" level="project" />
+    <orderEntry type="library" name="floki" level="project" />
+    <orderEntry type="library" name="makeup" level="project" />
+    <orderEntry type="library" name="nimble_parsec" level="project" />
+    <orderEntry type="library" name="unicode_set" level="project" />
+    <orderEntry type="library" name="benchee" level="project" />
+    <orderEntry type="library" name="benchee_markdown" level="project" />
+    <orderEntry type="library" name="assert_value" level="project" />
+    <orderEntry type="library" name="stream_data" level="project" />
   </component>
 </module>

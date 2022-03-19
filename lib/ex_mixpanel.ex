@@ -8,7 +8,7 @@ defmodule ExMixpanel do
          {:ok, to_str} <- format_date(to)
     do
       Api.get(
-        "/",
+        "/export",
         %{
           from_date: from_str,
           to_date: to_str
