@@ -24,6 +24,15 @@ export MIXPANEL_EXPORT_SECRET="your secret"
 export MIXPANEL_EXPORT_PROJECT_ID="your project id"
 ```
 
+in config.exs:
+
+```
+config :ex_mixpanel_export,
+  username: {:system, "MIXPANEL_EXPORT_USERNAME"},
+  secret: {:system, "MIXPANEL_EXPORT_SECRET"},
+  project_id: {:system, "MIXPANEL_EXPORT_PROJECT_ID"}
+```
+
 ## Usage
 
 Raw event export: https://developer.mixpanel.com/reference/raw-event-export
