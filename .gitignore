@@ -23,3 +23,4 @@ erl_crash.dump
 ex_mixpanel_export-*.tar
 
 .env
+.DS_Store

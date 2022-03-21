@@ -33,7 +33,7 @@ Raw event export: https://developer.mixpanel.com/reference/raw-event-export
 
 ```elixir
 
-csv_content = ExMixpanel.export_events(~D[2022-03-17], ~D[2022-03-17])
+csv_content = ExMixpanelExport.export_events(~D[2022-03-17], ~D[2022-03-17])
 conn
 |> put_resp_content_type("text/csv")
 |> put_resp_header(
@@ -43,5 +43,4 @@ conn
 |> send_resp(200, csv_content)
 ```
 
-For more information, please check [the API](https://github.com/thekirinlab/ex_mixpanel_export/blob/master/lib/ex_mixpanel_export/api.ex)
-
+For more information, please check [the API](https://hexdocs.pm/ex_mixpanel_export/1.0.1/ExMixpanelExport.Config.html)
