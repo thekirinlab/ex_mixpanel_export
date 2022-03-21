@@ -15,6 +15,7 @@ end
 ```
 
 ## API Key
+To get username, secret, and project id. Please go to https://developer.mixpanel.com/reference/service-accounts and follow the document there. 
 
 Register for a username and secret key and add it to the environment variable
 ```
@@ -26,7 +27,6 @@ export MIXPANEL_EXPORT_PROJECT_ID="your project id"
 ## Usage
 
 Raw event export: https://developer.mixpanel.com/reference/raw-event-export
-
 
 
 ### Export data from mixpanel and download as csv
