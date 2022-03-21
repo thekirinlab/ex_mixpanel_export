@@ -43,5 +43,5 @@ conn
 |> send_resp(200, csv_content)
 ```
 
-For more information, please check [the API](https://github.com/ngnclht1102/ex_mixpanel_export/blob/master/lib/ex_mixpanel_export/api.ex)
+For more information, please check [the API](https://github.com/thekirinlab/ex_mixpanel_export/blob/master/lib/ex_mixpanel_export/api.ex)
 
