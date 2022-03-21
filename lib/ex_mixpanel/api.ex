@@ -1,5 +1,8 @@
 defmodule ExMixpanel.Api do
-  alias ExMixpanel.{Config}
+  @moduledoc """
+  Service for handling API call
+  """
+  alias ExMixpanel.Config
   require Logger
 
   @base_url "https://data.mixpanel.com/api/2.0"
@@ -34,9 +37,10 @@ defmodule ExMixpanel.Api do
     ]
   end
 
-  defp handle_response({:ok, %HTTPoison.Response{body: body, status_code: code}})
+  defp handle_response({:ok, %HTTPoison.Response{body: json_lines, status_code: code}})
        when code in 200..299 do
-    {:ok, Poison.decode!(body)}
+    json_str = json_lines |> String.trim |> String.splitter("\n") |>  Enum.join(",")
+    {:ok, Poison.decode!("[#{json_str}]")}
   end
 
   defp handle_response({:error, %HTTPoison.Error{id: nil, reason: :timeout}}),

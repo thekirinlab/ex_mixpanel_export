@@ -41,6 +41,7 @@ defmodule ExMixpanel.MixProject do
       {:httpoison, "~> 1.0"},
       {:timex, "~> 3.1"},
       {:poison, "~> 3.1"},
+      {:nimble_csv, "~> 0.6"},
       {:ex_doc, ">= 0.0.0", only: :dev, runtime: false}
     ]
   end
