@@ -1,5 +1,5 @@
-defmodule ExMixpanel do
-  alias ExMixpanel.{Api, Csv}
+defmodule ExMixpanelExport do
+  alias ExMixpanelExport.{Api, Csv}
 
   use Timex
 

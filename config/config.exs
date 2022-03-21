@@ -10,11 +10,11 @@ use Mix.Config
 
 # You can configure your application as:
 #
-#     config :ex_mixpanel, key: :value
+#     config :ex_mixpanel_export, key: :value
 #
 # and access this configuration in your application as:
 #
-#     Application.get_env(:ex_mixpanel, :key)
+#     Application.get_env(:ex_mixpanel_export, :key)
 #
 # You can also configure a 3rd-party app:
 #
@@ -29,7 +29,7 @@ use Mix.Config
 #
 #     import_config "#{Mix.env}.exs"
 
-config :ex_mixpanel,
+config :ex_mixpanel_export,
   username: System.get_env("MIXPANEL_EXPORT_USERNAME"),
   secret: System.get_env("MIXPANEL_EXPORT_SECRET"),
   project_id: System.get_env("MIXPANEL_EXPORT_PROJECT_ID")

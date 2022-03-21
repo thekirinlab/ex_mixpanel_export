@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="nimble_csv" type="mix">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/nimble_csv/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/nimble_csv/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/nimble_csv/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/nimble_csv/ebin" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/deps/nimble_csv/lib" />
+      <root url="file://$PROJECT_DIR$/deps/nimble_csv/lib" />
+    </SOURCES>
+  </library>
+</component>

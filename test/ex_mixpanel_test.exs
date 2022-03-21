@@ -1,7 +1,7 @@
-defmodule ExMixpanelTest do
+defmodule ExMixpanelExportTest do
   use ExUnit.Case
-  alias ExMixpanel.{Config, Api}
-  doctest ExMixpanel
+  alias ExMixpanelExport.{Config, Api}
+  doctest ExMixpanelExport
 
   test "Api returns data" do
     assert 1 == 1

@@ -1,8 +1,8 @@
-defmodule ExMixpanel.Api do
+defmodule ExMixpanelExport.Api do
   @moduledoc """
   Service for handling API call
   """
-  alias ExMixpanel.Config
+  alias ExMixpanelExport.Config
   require Logger
 
   @base_url "https://data.mixpanel.com/api/2.0"

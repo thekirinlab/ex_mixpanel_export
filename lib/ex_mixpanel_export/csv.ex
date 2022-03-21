@@ -1,10 +1,10 @@
-defmodule ExMixpanel.Csv do
+defmodule ExMixpanelExport.Csv do
   @moduledoc """
   CSV export services
   """
 
   @bom :unicode.encoding_to_bom(:utf8)
-  alias ExMixpanel.CSVParser
+  alias ExMixpanelExport.CSVParser
   require Logger
 
   def to_csv(events) do

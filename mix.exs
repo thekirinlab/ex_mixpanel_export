@@ -1,10 +1,10 @@
-defmodule ExMixpanel.MixProject do
+defmodule ExMixpanelExport.MixProject do
   use Mix.Project
 
   def project do
     [
-      app: :ex_mixpanel,
-      version: "1.0.0",
+      app: :ex_mixpanel_export,
+      version: "1.0.1",
       elixir: "~> 1.6",
       start_permanent: Mix.env() == :prod,
       elixirc_paths: elixirc_paths(Mix.env()),
@@ -15,16 +15,16 @@ defmodule ExMixpanel.MixProject do
   end
 
   def description do
-    "Library for consuming Mixpanel export API"
+    "Library for consuming Mixpanel export API. Support exporting to CSV."
   end
 
   defp package do
     [
-      name: :ex_mixpanel,
+      name: :ex_mixpanel_export,
       files: ["lib", "mix.exs", "README*"],
-      maintainers: ["Nguyễn Giang Nam"],
+      maintainers: ["TheKirinLab"],
       licenses: ["MIT"],
-      links: %{"GitHub" => "https://github.com/ngnclht1102/ex_mixpanel"}
+      links: %{"GitHub" => "https://github.com/thekirinlab/ex_mixpanel_export"}
     ]
   end
 

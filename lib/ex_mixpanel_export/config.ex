@@ -1,17 +1,17 @@
-defmodule ExMixpanel.Config do
+defmodule ExMixpanelExport.Config do
   @moduledoc """
   Utility that handles interaction with the application's configuration
   """
 
   @doc """
   In config.exs, use a string, a function or a tuple:
-      config :ex_mixpanel, username: System.get_env("MIXPANEL_EXPORT_USERNAME")
+      config :ex_mixpanel_export, username: System.get_env("MIXPANEL_EXPORT_USERNAME")
 
   or:
-      config :ex_mixpanel, username: {:system, "MIXPANEL_EXPORT_USERNAME"}
+      config :ex_mixpanel_export, username: {:system, "MIXPANEL_EXPORT_USERNAME"}
 
   or:
-      config :ex_mixpanel, username: {MyApp.Config, :username, []}
+      config :ex_mixpanel_export, username: {MyApp.Config, :username, []}
   """
   def username do
     resolve(:username)
@@ -19,13 +19,13 @@ defmodule ExMixpanel.Config do
 
   @doc """
   In config.exs, use a string, a function or a tuple:
-      config :ex_mixpanel, secret: System.get_env("MIXPANEL_EXPORT_SECRET")
+      config :ex_mixpanel_export, secret: System.get_env("MIXPANEL_EXPORT_SECRET")
 
   or:
-      config :ex_mixpanel, secret: {:system, "MIXPANEL_EXPORT_SECRET"}
+      config :ex_mixpanel_export, secret: {:system, "MIXPANEL_EXPORT_SECRET"}
 
   or:
-      config :ex_mixpanel, secret: {MyApp.Config, :secret, []}
+      config :ex_mixpanel_export, secret: {MyApp.Config, :secret, []}
   """
   def secret do
     resolve(:secret)
@@ -33,13 +33,13 @@ defmodule ExMixpanel.Config do
 
   @doc """
   In config.exs, use a string, a function or a tuple:
-      config :ex_mixpanel, project_id: System.get_env("MIXPANEL_EXPORT_PROJECT_ID")
+      config :ex_mixpanel_export, project_id: System.get_env("MIXPANEL_EXPORT_PROJECT_ID")
 
   or:
-      config :ex_mixpanel, project_id: {:system, "MIXPANEL_EXPORT_PROJECT_ID"}
+      config :ex_mixpanel_export, project_id: {:system, "MIXPANEL_EXPORT_PROJECT_ID"}
 
   or:
-      config :ex_mixpanel, project_id: {MyApp.Config, :project_id, []}
+      config :ex_mixpanel_export, project_id: {MyApp.Config, :project_id, []}
   """
   def project_id do
     resolve(:project_id)
@@ -54,7 +54,7 @@ defmodule ExMixpanel.Config do
   def resolve(key, default \\ nil)
 
   def resolve(key, default) when is_atom(key) do
-    Application.get_env(:ex_mixpanel, key, default)
+    Application.get_env(:ex_mixpanel_export, key, default)
     |> expand_value()
   end
 
